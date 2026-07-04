@@ -1,0 +1,35 @@
+# Production Environment Configuration
+app:
+  name: "ai-genai-llm-security-redteaming"
+  version: "1.0.0"
+
+target:
+  provider: "anthropic"
+  model: "claude-sonnet-4-20250514"
+  temperature: 0.7
+  max_tokens: 4096
+
+attacker:
+  provider: "anthropic"
+  model: "claude-sonnet-4-20250514"
+  temperature: 0.9
+  max_tokens: 2048
+
+redteam:
+  max_attack_attempts: 20
+  categories:
+    - "prompt_injection"
+    - "jailbreak"
+    - "data_leakage"
+    - "excessive_agency"
+    - "insecure_output"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: false
+
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/app-prod.log"

@@ -1,0 +1,46 @@
+# Application Configuration
+app:
+  name: "ai-genai-llm-security-redteaming"
+  version: "1.0.0"
+  description: "LLM Security Red-Teaming Framework"
+
+# Target LLM (the model being tested for vulnerabilities)
+target:
+  provider: "anthropic"
+  model: "claude-sonnet-4-20250514"
+  temperature: 0.7
+  max_tokens: 4096
+
+# Attacker LLM (model used to generate attack prompts)
+attacker:
+  provider: "anthropic"
+  model: "claude-sonnet-4-20250514"
+  temperature: 0.9
+  max_tokens: 2048
+
+# Red Team Pipeline Configuration
+redteam:
+  max_attack_attempts: 10
+  categories:
+    - "prompt_injection"
+    - "jailbreak"
+    - "data_leakage"
+    - "excessive_agency"
+    - "insecure_output"
+  severity_levels:
+    - "critical"
+    - "high"
+    - "medium"
+    - "low"
+
+# API Server Settings
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: false
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/app.log"

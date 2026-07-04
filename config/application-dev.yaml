@@ -1,0 +1,32 @@
+# Development Environment Configuration
+app:
+  name: "ai-genai-llm-security-redteaming"
+  version: "1.0.0"
+
+target:
+  provider: "anthropic"
+  model: "claude-sonnet-4-20250514"
+  temperature: 0.7
+  max_tokens: 2048
+
+attacker:
+  provider: "anthropic"
+  model: "claude-sonnet-4-20250514"
+  temperature: 0.9
+  max_tokens: 1024
+
+redteam:
+  max_attack_attempts: 5
+  categories:
+    - "prompt_injection"
+    - "jailbreak"
+
+api:
+  host: "127.0.0.1"
+  port: 8000
+  reload: true
+
+logging:
+  level: "DEBUG"
+  format: "text"
+  file: "logs/app-dev.log"
