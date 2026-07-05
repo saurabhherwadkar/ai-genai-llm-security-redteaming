@@ -2,6 +2,19 @@
 
 Automated LLM security testing framework implementing the OWASP Top 10 for LLM Applications (2025 edition). Generates attack payloads, executes them against target LLMs, evaluates results, tests defenses, and produces vulnerability reports.
 
+## Key Learning Objectives
+
+- Understand the OWASP Top 10 for LLM Applications and how each vulnerability category manifests in production systems
+- Design and implement automated prompt injection attacks including direct overrides, delimiter abuse, and instruction smuggling
+- Build jailbreak detection and generation pipelines using persona adoption, hypothetical framing, and obfuscation techniques
+- Develop a dual-LLM red-teaming architecture where an attacker model systematically probes a target model for weaknesses
+- Implement defense layers including input validation for injection detection and output sanitization for safe response handling
+- Construct automated evaluation systems that assess whether adversarial attacks successfully bypassed LLM safety controls
+- Apply structured vulnerability scoring and risk assessment methodologies to quantify LLM security posture
+- Create comprehensive security reports with executive summaries, evidence chains, and actionable remediation guidance
+- Architect end-to-end security scanning pipelines that orchestrate attack generation, execution, evaluation, and reporting
+- Practice responsible AI security testing workflows including scoped assessments, ethical boundaries, and disclosure practices
+
 ## Table of Contents
 
 1. [Overview](#overview)
